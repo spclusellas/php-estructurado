@@ -1,5 +1,5 @@
 <?php
-include_once('funciones_derqui.php');
+include_once('funciones.php');
 include_once('paises.php');
 
 if ($_POST) {
@@ -47,7 +47,7 @@ if ($_POST) {
          <?php endforeach; ?>
        <?php endif; ?>
       </ul>
-      <form class="mx-a" action="formulario_derqui.php" method="post" enctype="multipart/form-data">
+      <form class="mx-a" action="formulario_registro.php" method="post" enctype="multipart/form-data">
         <label for="nombre">Nombre:</label><br>
         <input type="text" name="nombre" value=<?=persistir("nombre")?>>
         <br>

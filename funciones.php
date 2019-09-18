@@ -153,11 +153,15 @@ function armarImagen($imagen){
 }
 
 // En esta funcion (si es que toda la validacion fue correcta) se le va a poner a la variable $_SESSION toda la información del usuario que inicio sesion.
-function inicioSesion($usuario){
+function inicioSesion($usuario, $dato){
   $_SESSION["nombre"] = $usuario["nombre"];
   $_SESSION["apellido"] = $usuario["apellido"];
   $_SESSION["email"] = $usuario["email"];
   $_SESSION["avatar"] = $usuario["avatar"];
+  if(isset($dato["recordar"])){
+        setcookie("email",$dato["email"],time()+3600);
+        setcookie("password",$dato["password"],time()+3600);
+    }
 }
 
 
