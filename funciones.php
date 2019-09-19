@@ -160,7 +160,7 @@ function inicioSesion($usuario, $dato){
   $_SESSION["avatar"] = $usuario["avatar"];
   if(isset($dato["recordar"])){
         setcookie("email",$dato["email"],time()+3600);
-        setcookie("password",$dato["password"],time()+3600);
+        setcookie("password",$dato["contrasenia"],time()+3600);
     }
 }
 

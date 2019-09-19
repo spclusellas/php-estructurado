@@ -9,7 +9,7 @@ if ($_POST) {
   if (count($errores) == 0) {
       // En este punto voy a buscar el email que ingreso el usuario en nuestra base de datos. La funcion buscarPorEmail retorna toda la informacion del usuario con ese mail.
       $usuario = buscarPorEmail($_POST["email"]);
-      var_dump($usuario);
+      // var_dump($usuario);
       // exit;
       // En este if evaluo que en caso de que el usuario sea distinto de falso, es decir que buscarPorEmail me traiga informacion de un usuario se producira un error ya que implica que el usuario ya se encuentra registrado.
       if ($usuario != null) {

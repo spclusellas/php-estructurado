@@ -40,9 +40,9 @@ if ($_POST) {
      <?php endif; ?>
      <form class="" action="login.php" method="post">
        <label for="email">Email:</label>
-       <input type="email" name="email" value=""><br>
+       <input type="email" name="email" value=<?=$_COOKIE["email"] ?>><br>
        <label for="contrasenia">Contraseña:</label>
-       <input type="password" name="contrasenia" value=""><br>
+       <input type="password" name="contrasenia" value=<?=$_COOKIE["password"] ?>><br>
        <input type="checkbox" name="recordar" value="S"> Recordar Usuario <br>
        <button type="submit" name="button">Iniciar Sesion</button>
      </form>
